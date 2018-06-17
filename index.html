@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css"/>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        window.onload = function (){
+            var ue = new EditorInoto("div.box.box1  div#faceBox",["qqface","text","upPhoto"]);  /*这里要应用：类（模板）*/
+            document.getElementById("btnHTML").onclick=function(){
+                ue.editor_html();/*获取编辑框中的html*/
+            }
+            document.getElementById("btnTEXT").onclick=function(){
+                ue.editor_txet();/*获取编辑框中的txet*/
+            },
+            document.getElementById("btnWrite").onclick=function(){
+                 ue.editor_wrtie();/*把后台的html标签字符串，显示到编辑器中*/
+            }
+        }
+    </script>
+</head>
+<body >
+     <div class="box box1">
+         <text>QQ表情插件</text>
+         <div id="faceBox"></div>
+         <button id="btnHTML" >获取编辑框中的html(使用方法是:editor_html)</button>
+         <button id="btnTEXT" >获取编辑框中的txet(使用方法是:editor_txet)</button>
+         <button id="btnWrite">把后台的html标签字符串，显示到编辑器中(使用方法是:editor_wrtie)</button>
+     </div>
+
+
+
+
+
+<textarea style="width: 500px;height: 200px;margin: 100px 0 0 29px; " id="Editortextarea">
+         <p>谔谔谔谔</p>
+         <span class="faceObj" id="faceObj8" style="background-image:url(img/9.gif);" title="大哭" contenteditable="false" faceobj="[face_9]"></span>
+         发&nbsp;<span class="faceObj" id="faceObj16" title="抓狂" contenteditable="false" faceobj="[face_17]" style="background-image: url(img/10.gif);"></span>
+</textarea>
+     <text style="color:red;">*可以在textarea中编辑html,并点击第三个按钮,在编辑器中显示！</text>
+
+
+</body>
+
+
+</html>
